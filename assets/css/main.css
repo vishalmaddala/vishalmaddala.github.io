@@ -2024,3 +2024,277 @@ input[type="button"]:focus {
 .terminal-style a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+@media (max-width: 768px) {
+	/* Adjust Work Experience visuals */
+	.work__visual {
+	  position: static;
+	  transform: none;
+	  margin-top: 20px;
+	  width: auto;
+	  max-width: 100%;
+	}
+	
+	/* Let work list elements flow normally */
+	.work__list-el {
+	  display: block;
+	  min-height: auto;
+	  max-height: none;
+	  margin-bottom: 30px;
+	}
+	
+	/* Adjust Contact section positioning */
+	.terminal-style,
+	.contact__info {
+	  position: static;
+	  transform: none;
+	  width: 100%;
+	  margin-top: 20px;
+	}
+	
+	/* Optionally remove large borders that can cause overflow */
+	.about__wrapper::before,
+	.work__list::before,
+	.contact__wrapper::before {
+	  border: none;
+	}
+  }
+  @media (max-width: 768px) {
+	/* Stack each experience entry in a column */
+	.work__list-el {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;   /* Optional: center the contents horizontally */
+	  text-align: center;    /* Optional: center text */
+	  min-height: auto;
+	  max-height: none;
+	  margin-bottom: 30px;
+	}
+  
+	/* Let the text span full width in mobile */
+	.work__content {
+	  width: 100%;
+	  margin: 0 auto;
+	}
+  
+	/* Override the absolute positioning on the image */
+	.work__visual {
+	  position: static;      /* remove absolute positioning */
+	  transform: none;       /* remove translateY */
+	  width: auto;           /* let it shrink */
+	  max-width: 300px;      /* or 100%, whichever you prefer */
+	  margin-top: 20px;      /* space above the image */
+	  margin-bottom: 20px;   /* space below if needed */
+	}
+  }
+	
+
+  @media (max-width: 768px) {
+	/* Make each work entry a column stack */
+	.work__list-el {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center; /* Center them horizontally (optional) */
+	  min-height: auto;
+	  max-height: none;
+	  margin-bottom: 30px;
+	}
+  
+	/* Position the image above the text, and shrink it */
+	.work__visual {
+	  position: static;   /* remove absolute positioning */
+	  order: -1;          /* move it above the text */
+	  max-width: 150px;   /* make it smaller */
+	  margin-bottom: 10px;/* space between the image and heading */
+	  transform: none;
+	}
+  
+	/* Let the text be 100% width, centered if desired */
+	.work__content {
+	  width: 100%;
+	  max-width: 90%;     /* optional max-width for better reading */
+	  margin: 0 auto;
+	  text-align: center; /* center the text (optional) */
+	}
+  }
+  @media (max-width: 768px) {
+	/* Make the grid still a flex container, but stacked */
+	.certification-grid {
+	  display: flex;
+	  flex-direction: column; 
+	  align-items: center; 
+	  gap: 20px; 
+	}
+  
+	/* Stack images vertically inside each row */
+	.certification-row {
+	  flex-direction: column;  /* was row by default */
+	  gap: 20px;               /* reduce from 250px */
+	  margin-bottom: 20px;     /* add spacing between rows */
+	}
+  
+	/* Make images shrink if needed */
+	.certification-row img {
+	  width: 150px;  /* or 100% if you want them full width */
+	  height: auto;
+	  margin: 0 auto; /* center them horizontally */
+	}
+  }
+	
+
+
+  @media (max-width: 768px) {
+	/* Remove any big decorative border that might push content */
+	.contact__wrapper::before {
+	  content: none !important;
+	  border: none !important;
+	}
+  
+	/* Force the parent wrapper classes to go full width on mobile */
+	.wrapper,
+	.wrapper--small,
+	.wrapper--large {
+	  width: 100% !important;
+	  max-width: 100% !important;
+	  margin: 0 auto !important;
+	  padding: 0 !important;
+	}
+  
+	/* Now stack the Contact section items vertically and center them */
+	.contact__wrapper {
+	  display: flex !important;
+	  flex-direction: column !important;
+	  align-items: center !important;
+	  justify-content: center !important;
+	  position: static !important;
+	  width: 100% !important;
+	  margin: 0 auto !important;
+	  padding: 0 !important;
+	  gap: 20px !important;
+	}
+  
+	/* Center the map/image container */
+	.contact__visual {
+	  position: static !important;
+	  width: 100% !important;
+	  max-width: 500px !important; /* Adjust as you wish */
+	  margin: 0 auto !important;
+	  text-align: center !important;
+	}
+  
+	/* Center the terminal box */
+	.terminal-style {
+	  position: static !important;
+	  transform: none !important;
+	  width: 100% !important;
+	  max-width: 500px !important; /* Adjust as you wish */
+	  margin: 0 auto !important;
+	  text-align: center !important;
+	  padding: 0 15px !important;  /* Some side padding for readability */
+	}
+  
+	/* If you want the text inside the terminal fully centered */
+	.terminal-style p,
+	.terminal-style a {
+	  text-align: center !important;
+	}
+  }
+  
+
+
+  @media (max-width: 768px) {
+	/* Shrink the map container */
+	.contact__visual {
+	  max-width: 350px !important; /* Adjust as desired (e.g., 300px, 400px) */
+	  margin: 0 auto !important;
+	}
+  
+	/* Ensure the map image doesn’t overflow */
+	.contact__visual img {
+	  max-width: 100% !important;
+	  height: auto !important;
+	}
+  
+	/* Shrink the terminal box */
+	.terminal-style {
+	  max-width: 350px !important; /* Adjust as desired */
+	  margin: 0 auto !important;
+	  font-size: 14px !important;  /* Optional: reduce text size */
+	  line-height: 1.4 !important; /* Tweak line spacing for readability */
+	}
+  }
+
+
+ 
+  
+  
+  @media (max-width: 768px) {
+	/* Let each work entry stack vertically */
+	.work__list-el {
+	  display: flex !important;
+	  flex-direction: column !important;
+	  align-items: center !important;
+	  min-height: auto !important;
+	  max-height: none !important;
+	  margin-bottom: 30px !important;
+	}
+  
+	/* Make the text fill the width, centered if you want */
+	.work__content {
+	  width: 100% !important;
+	  text-align: center !important;
+	  margin: 0 auto !important;
+	  position: static !important;
+	}
+  
+	/* Force the logo above the heading, smaller size */
+	.work__visual {
+	  position: static !important;  /* Remove absolute positioning */
+	  transform: none !important;
+	  order: -1 !important;         /* Stack it above the text in flex layout */
+	  align-self: center !important;
+	  width: 60px !important;       /* Make it smaller */
+	  height: auto !important;
+	  margin: 0 0 10px 0 !important;
+	}
+  }
+  @media (max-width: 768px) {
+	/* Hide non-active work entries */
+	.work__list-el:not(.work__list-el--is-active) {
+	  display: none !important;
+	}
+  
+	/* For the active work experience, stack items vertically */
+	.work__list-el--is-active {
+	  display: flex !important;
+	  flex-direction: column !important;
+	  align-items: center !important;
+	  margin-bottom: 30px !important;
+	  min-height: auto !important;
+	  max-height: none !important;
+	}
+  
+	/* Make the text container take full width and center its content */
+	.work__content {
+	  width: 100% !important;
+	  text-align: center !important;
+	  margin: 0 auto !important;
+	  position: static !important;
+	}
+  
+	/* Move the logo above the text, make it smaller, and center it */
+	.work__visual {
+	  position: static !important;  /* Remove absolute positioning */
+	  order: -1 !important;         /* Place it above the text */
+	  transform: none !important;
+	  align-self: center !important;
+	  width: 60px !important;       /* Adjust size as needed */
+	  height: auto !important;
+	  margin-bottom: 10px !important;
+	}
+  }
+	
